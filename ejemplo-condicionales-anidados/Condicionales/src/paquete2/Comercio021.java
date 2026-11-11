@@ -33,6 +33,10 @@ public class Comercio021 {
         
         double sueldoFinal; 
         String region;
+        String nombreEmpresa;
+        
+        System.out.println("Ingrese el nombre de la Empresa por favor");
+        nombreEmpresa = entrada.nextLine();
         
         System.out.println("Ingrese el nombre por favor");
         nombre = entrada.nextLine();
@@ -87,6 +91,9 @@ public class Comercio021 {
                     porcentajeSeguro =30;
                     }else{
                         porcentajeSeguro = 8;
+                        
+//Le damos el valor de ocho a porcetajeSeguro debido a si en caso de que el usuario es extranjero o no pertenece a ninguna regio y digita otro nombre
+   
                     }
                 }
             }   
@@ -94,7 +101,7 @@ public class Comercio021 {
         adicionalSeguro = (sueldoBasico * porcentajeSeguro)/100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
-        System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
+        System.out.printf("Reporte de Empleado %s\n\n"
                 + "Nombres: %s\n"
                 + "Apellidos: %s\n"
                 + "Region: %s\n"
@@ -105,7 +112,8 @@ public class Comercio021 {
                 + "\tBono: $%.2f\n"
                 + "Adicional del seguro: $%.2f\n\n"
                 + "Sueldo final: $%.2f\n", 
-                nombre, 
+                nombreEmpresa,
+                nombre,
                 apellido,
                 region,
                 edad,
