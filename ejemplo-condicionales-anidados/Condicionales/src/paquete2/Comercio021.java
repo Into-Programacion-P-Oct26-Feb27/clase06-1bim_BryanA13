@@ -32,12 +32,16 @@ public class Comercio021 {
         double adicionalSeguro;
         
         double sueldoFinal; 
+        String region;
         
         System.out.println("Ingrese el nombre por favor");
         nombre = entrada.nextLine();
         
         System.out.println("Ingrese el apellido por favor");
         apellido = entrada.nextLine();
+        
+        System.out.println("Ingrese su region por favor");
+        region = entrada.nextLine();
         
         System.out.println("Ingrese la edad por favor");
         edad = entrada.nextInt();
@@ -70,13 +74,30 @@ public class Comercio021 {
             }
         }
         
-       
+        if (region.equals("Sierra")){
+            porcentajeSeguro = 10;
+        }else{
+            if(region.equals("Costa")){
+                porcentajeSeguro = 12;
+            }else{
+                if (region.equals("Oriente")){
+                    porcentajeSeguro =15;
+                }else{
+                    if (region.equals("Insular")){
+                    porcentajeSeguro =30;
+                    }else{
+                        porcentajeSeguro = 8;
+                    }
+                }
+            }   
+        }            
         adicionalSeguro = (sueldoBasico * porcentajeSeguro)/100;
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
         System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
                 + "Nombres: %s\n"
                 + "Apellidos: %s\n"
+                + "Region: %s\n"
                 + "Edad: %d\n"
                 + "Sueldo: $%.2f\n"
                 + "Número de productos vendidos: %d\n"
@@ -86,6 +107,7 @@ public class Comercio021 {
                 + "Sueldo final: $%.2f\n", 
                 nombre, 
                 apellido,
+                region,
                 edad,
                 sueldoBasico,
                 numeroProductos,
@@ -93,7 +115,11 @@ public class Comercio021 {
                 bono,
                 adicionalSeguro,
                 sueldoFinal);
-        
+        /*
+    De acuerdo a nueva formativa el porcentaje del seguro es variable si el 
+enviado viene de la cierra el porcentaje del srguro es 10%, costa 12% , oriente 15%
+insular 30%. Acoplar la solcuicion para que considere la nueva normativa
+*/
         
     }
     
