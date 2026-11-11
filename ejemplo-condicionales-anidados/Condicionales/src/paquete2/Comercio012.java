@@ -32,13 +32,12 @@ public class Comercio012 {
         double adicionalSeguro;
 
         double sueldoFinal;
-        
+
         String nombreEmpresa;
-        
-        
+
         System.out.println("Ingrese el nombre de la Empresa por favor");
         nombreEmpresa = entrada.nextLine();
-        
+
         System.out.println("Ingrese el nombre por favor");
         nombre = entrada.nextLine();
 
