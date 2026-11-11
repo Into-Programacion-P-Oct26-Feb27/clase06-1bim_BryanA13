@@ -44,3 +44,11 @@ public class Ejemplo01 {
     }
 
 }
+
+
+/*
+    Para que el mensaje "Trabajar con And" salga en pantalla, el ususario debe
+de ingresar el valor 1, de ahi comparar con la linea 27, para que s ecumpla debe
+salir en ambas condiciones TRUE, si sale TRUE sale la opcion uno que seria igual 
+a 1 y ya saldria el mensaje en pantalla 
+*/
